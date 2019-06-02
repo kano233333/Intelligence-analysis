@@ -1,13 +1,16 @@
 {
-  "name": "vue_init",
+  "name": "intelligence_analysis",
   "version": "1.0.0",
-  "description": "this projects is for vue init",
-  "author": "Yupeng0813 <1072172744@qq.com>",
+  "description": "intelligence_analysis",
   "private": true,
+  "author": "kano233333",
+  "main":"./dist/main.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "electron_dev": "npm run build && electron build/electron.js",
+    "electron_build": "electron-builder"
   },
   "dependencies": {
     "iview": "^3.1.4",
@@ -28,6 +31,9 @@
     "chalk": "2.0.1",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.28.0",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.41.0",
+    "electron-packager": "^13.1.1",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "1.1.4",
     "friendly-errors-webpack-plugin": "1.6.1",

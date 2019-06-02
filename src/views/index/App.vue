@@ -1,6 +1,6 @@
 <!-- index -->
 <template>
-  <div class="index"></div>
+  <div class="index">智分析</div>
 </template>
 
 <script>
