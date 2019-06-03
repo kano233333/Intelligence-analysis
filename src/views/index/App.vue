@@ -1,10 +1,13 @@
-<!-- index -->
 <template>
-  <div class="index">智分析</div>
+  <div>
+    <HeadPart></HeadPart>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
 import { mapState, mapMutations   } from 'vuex'
+import HeadPart from '../components/headPart'
 
 export default {
   data () {
@@ -21,8 +24,10 @@ export default {
     ...mapMutations ({
       change: 'changState'
     }),
+  },
+  components:{
+    HeadPart
   }
-
 }
 
 </script>

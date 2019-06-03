@@ -5,6 +5,8 @@ import index from '../views/index/router'
 Vue.use(Router)
 
 export default new Router({
+  // linkExactActiveClass:'active',
+  linkActiveClass:'active',
   routes: [
     {
       path: '/',
