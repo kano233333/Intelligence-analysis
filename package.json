@@ -4,13 +4,19 @@
   "description": "intelligence_analysis",
   "private": true,
   "author": "kano233333",
-  "main":"./dist/main.js",
+  "main": "./build/electron.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
     "electron_dev": "npm run build && electron build/electron.js",
-    "electron_build": "electron-builder"
+    "electron_build": "electron-packager ./dist/ --platform=win32 --arch=x64 --overwrite"
+  },
+  "build": {
+    "productName": "",
+    "directories": {
+      "output": "pack"
+    }
   },
   "dependencies": {
     "iview": "^3.1.4",

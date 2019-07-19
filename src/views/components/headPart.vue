@@ -3,6 +3,7 @@
     <div class="title">
       <p>数据灵感之智分析</p>
       <img src="../../assets/imgs/header/head_bg.png"/>
+      <TitleBtn></TitleBtn>
     </div>
     <div class="nav">
       <NavLi v-bind:key="index" v-for="(item,index) in menu" :name="item.name" :link="item.link" :child="item.child || false"></NavLi>
@@ -12,38 +13,41 @@
 
 <script>
   import NavLi from '../components/navLi'
+  import TitleBtn from '../components/titleBtn'
+
   export default {
     name: "headPart",
     data(){
       return {
         menu:[
-          {name:'开始',link:'/start'},
-          {name:'数据灵感',link:'/dataFrom'},
+          {name:'开',link:'/start'},
+          {name:'数',link:'/dataFrom'},
           {
-            name:'短句提取',link:'/shortSentence',
+            name:'短',link:'/shortSentence',
             child:[
               {
-                name:'基于统计',
+                name:'基',
                 icon:'',
                 link:'/shortSentence/statistics'
               },
               {
-                name:'基于数据词',
+                name:'基',
                 icon:'',
                 link:'/shortSentence/word'
               }
             ]
           },
-          {name:'关键词提取',link:'/keyword'},
-          {name:'词关键性分析',link:'/relative'},
-          {name:'主题分析',link:'/theme'},
-          {name:'工具',link:'/tools'},
-          {name:'帮助',link:'/help'}
+          {name:'关',link:'/keyword'},
+          {name:'词',link:'/relative'},
+          {name:'主',link:'/theme'},
+          {name:'工',link:'/tools'},
+          {name:'帮',link:'/help'}
         ]
       }
     },
     components:{
-      NavLi
+      NavLi,
+      TitleBtn
     }
   }
 </script>

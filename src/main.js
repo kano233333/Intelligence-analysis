@@ -2,7 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-
+import fs from 'fs'
+// import electron from 'electron'
+// import electron from '../public/renderer'
+// console.log(electron)
 Vue.config.productionTip = false
 
 
@@ -21,6 +24,8 @@ Vue.use(lib)
 //全局接口
 import api from './api'
 Vue.use(api)
+
+// Vue.use(electron)
 
 //自定义css
 import './assets/css/reset.css'
